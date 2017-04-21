@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane style="-fx-background-color: #228B22;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.blackjack.Controller">
+   <children>
+      <Pane prefHeight="550.0" prefWidth="700.0">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="700.0">
+               <children>
+                  <ImageView fx:id="dealerCard1" fitHeight="115.0" fitWidth="90.0" layoutX="260.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="dealerCard2" fitHeight="115.0" fitWidth="90.0" layoutX="357.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label layoutX="629.0" layoutY="14.0" text="Dealer">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutY="200.0" prefHeight="120.0" prefWidth="700.0">
+               <children>
+                  <ImageView fx:id="deckContainer" fitHeight="115.0" fitWidth="90.0" layoutX="580.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="file:resources/cards/_CARDBACK" />
+					</image>               		
+                  </ImageView>
+                  <Label layoutX="14.0" layoutY="51.0" text="Bet: ">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="setBet" layoutX="55.0" layoutY="51.0" prefHeight="23.0" prefWidth="165.0">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelNotice" layoutX="228.0" layoutY="48.0" prefHeight="30.0" prefWidth="244.0" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutY="320.0" prefHeight="230.0" prefWidth="700.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="168.0" text="Player">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="193.0" text="Money:">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="playerCard1" fitHeight="115.0" fitWidth="90.0" layoutX="187.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="playerCard2" fitHeight="115.0" fitWidth="90.0" layoutX="212.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="playerCard3" fitHeight="115.0" fitWidth="90.0" layoutX="237.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="playerCard4" fitHeight="115.0" fitWidth="90.0" layoutX="262.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="playerCard5" fitHeight="115.0" fitWidth="90.0" layoutX="287.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="playerCard6" fitHeight="115.0" fitWidth="90.0" layoutX="312.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="playerCard7" fitHeight="115.0" fitWidth="90.0" layoutX="337.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" />
+                  <Slider fx:id="choiseBet" blockIncrement="1000.0" layoutX="648.0" layoutY="50.0" majorTickUnit="100.0" max="1000.0" orientation="VERTICAL" prefHeight="166.0" prefWidth="0.0" showTickLabels="true" snapToPixel="false" snapToTicks="true" value="1.0" />
+                  <Button fx:id="takeCardID" disable="true" layoutX="508.0" layoutY="56.0" mnemonicParsing="false" onAction="#takeCard" prefHeight="32.0" prefWidth="111.0" text="Take card" />
+                  <Button fx:id="passID" disable="true" layoutX="508.0" layoutY="99.0" mnemonicParsing="false" onAction="#pass" prefHeight="32.0" prefWidth="111.0" text="Pass" />
+                  <Button fx:id="putBetID" layoutX="508.0" layoutY="177.0" mnemonicParsing="false" onAction="#putBet" prefHeight="32.0" prefWidth="111.0" text="Put bet" />
+                  <Label fx:id="playerMoney" layoutX="81.0" layoutY="193.0" prefHeight="23.0" prefWidth="173.0" text="1000">
+                     <font>
+                        <Font name="Times New Roman Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children></Pane>
+   </children>
+</AnchorPane>
